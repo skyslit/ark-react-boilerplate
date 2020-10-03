@@ -4,9 +4,7 @@ import StarterPageView from "./views/StarterPage.view";
 import { ComponentMap } from "@skyslit/ark-react/build/types";
 
 export type StateType = {
-  StartMessage: {
-    msg1: string;
-  };
+ 
 };
 
 export default class DefaultModule extends ArkModule<StateType, "AuthServer"> {
@@ -16,9 +14,6 @@ export default class DefaultModule extends ArkModule<StateType, "AuthServer"> {
     this.useConnect(connect);
 
     this.controller = {
-      sayHello() {
-        console.log("Hello day");
-      },
     };
 
     this.getReducer = () => {
@@ -39,8 +34,5 @@ export default class DefaultModule extends ArkModule<StateType, "AuthServer"> {
   };
 
   initialState: StateType = {
-    StartMessage: {
-      msg1: "Hola",
-    },
   };
 }

@@ -36,7 +36,7 @@ _package
 _package.initialize(
   "Browser",
   (err, opts) => {
-    ReactDOM.hydrate(
+    ReactDOM.render(
       <HelmetProvider>
         <Provider store={opts.setupStore(true)}>
           <opts.Router />
